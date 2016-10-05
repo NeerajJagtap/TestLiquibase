@@ -52,9 +52,17 @@
 					<propertyFile>liquibase/liquibase.properties</propertyFile>
 					<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
 				</configuration>
-				<!-- I personally prefer run it manually <executions> <execution> <phase>process-resources</phase> 
-					<goals> <goal>update</goal> </goals> </execution> </executions> -->
+				<!-- I personally prefer run it manually -->
+				<executions>
+					<execution>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>update</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

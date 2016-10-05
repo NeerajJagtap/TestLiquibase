@@ -3,7 +3,8 @@
 	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 	<changeSet author="Vuclip (generated)" id="1474981697072-1">
-		<sql>Alter table user change fname first_name varchar(45);</sql>
+		<renameColumn tableName="user" oldColumnName="fname"
+			newColumnName="first_name" columnDataType="varchar(45)" />
 	</changeSet>
 	<changeSet id="1474981697072-2" author="Vuclip (generated)">
 		<tagDatabase tag="tag-1.1" />
